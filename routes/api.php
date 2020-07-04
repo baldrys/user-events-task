@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'middleware' => ["auth:api"]
+], function () {
+    Route::get('/events/{event}', 'Api\EventController@getParticipants');
+    Route::post('/events/{event}', 'Api\EventController@addParticipant');
+    Route::patch('/events/{event}/participants/{participant} ', 'Api\EventController@updateParticipant');
+    Route::delete('/events/{event}/participants/{participant}', 'Api\EventController@deleteParticipant');
 });
