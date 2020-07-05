@@ -18,7 +18,7 @@ use Illuminate\Support\Str;
 */
 
 
-$factory->define(Participant::class, function (Faker $faker) use ($names) {
+$factory->define(Participant::class, function (Faker $faker) {
     return [
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
