@@ -23,8 +23,8 @@ DB_PASSWORD=secret
 ## Доступные эндпоинты
 
 ```
-GET    /events/{event}/participants               - получить всех участников
-POST   /events/{event}/participants               - Добавить участников
+GET    /events/{event}                            - получить всех участников
+POST   /events/{event}                            - Добавить участников
 PATCH  /events/{event}/participants/{participant} - Изменить участника
 DELETE /events/{event}/participants/{participant} - Удалить участника
 ```
