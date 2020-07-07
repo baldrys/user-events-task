@@ -14,7 +14,7 @@ DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
 
-5. Для отправки email установить параметр адресса отправки почты `MAIL_FROM_ADDRESS`
+5. Для работы отправки писем добавить параметры: `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_FROM_ADDRESS`
 6. Выполнить команду генерации ключа приложения `php artisan key:generate`
 7. Выполнить `php artisan migrate --seed`
 8. Запустить локальный сервер (можно командой `php artisan serve`)
